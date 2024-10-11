@@ -7,9 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-@Test
 public class Test0
 {
+	@Test
 	public void verify()
 	{
 		WebDriver driver = new ChromeDriver();
@@ -21,5 +21,6 @@ public class Test0
 		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
 		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
 		driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
+		driver.close();
 	}
 }
